@@ -13,25 +13,24 @@ public class rock : MonoBehaviour
         animation_state = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnMouseUpAsButton()
     {
         Hit_Points--;
 
-        animation_state.Play("Hit", -1 , 0f);
-
-    }
-
-    public void OnDelete()
-    {
         if (Hit_Points <= 0)
         {
+            audiomanager.instance.onBreakSound();
+
             Destroy(gameObject);
         }
+        else
+        {
+            audiomanager.instance.onHitSound();
+
+            animation_state.Play("Hit", -1, 0f);
+        }
+        
+
     }
+
 }
