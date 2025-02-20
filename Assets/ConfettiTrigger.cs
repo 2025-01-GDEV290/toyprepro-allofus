@@ -1,38 +1,53 @@
-using UnityEngine;
-using UnityEngine.UI;  // Required for UI interactions
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class ConfettiTrigger : MonoBehaviour
 {
-    public Button confettiButton;  // Assign the button in the Inspector
-    public ParticleSystem confettiEffect;  // Assign the Particle System in the Inspector
+    public Button confettiButton;
+    public ParticleSystem confettiEffect;
+    public AudioSource confettiSound;  // 🔹 Make sure this is PUBLIC
 
     void Start()
     {
-        Debug.Log("ConfettiTrigger script is running!"); // Confirm script is running
+        confettiSound = GetComponent<AudioSource>();
 
         if (confettiButton != null)
         {
             confettiButton.onClick.AddListener(PlayConfetti);
-            Debug.Log("Confetti Button is assigned and listening for clicks!"); // Confirm button is assigned
         }
         else
         {
-            Debug.LogError("Confetti Button is NOT assigned in the Inspector!");
+            Debug.LogError("Confetti Button is NOT assigned!");
+        }
+
+        if (confettiSound == null)
+        {
+            Debug.LogError("Confetti Sound is NOT assigned in the Inspector!");
         }
     }
 
     public void PlayConfetti()
     {
-        Debug.Log("Button Clicked! Calling PlayConfetti()...");
+        Debug.Log("Button Clicked! Playing Confetti & Sound...");
 
         if (confettiEffect != null)
         {
             confettiEffect.Play();
-            Debug.Log("Confetti played successfully!");
+            Debug.Log("Confetti played!");
         }
         else
         {
-            Debug.LogError("Confetti Particle System is NOT assigned in the Inspector!");
+            Debug.LogError("Confetti Particle System is NOT assigned!");
+        }
+
+        if (confettiSound != null)
+        {
+            confettiSound.Play();
+            Debug.Log("Sound played!");
+        }
+        else
+        {
+            Debug.LogError("Confetti Sound is NOT assigned!");
         }
     }
 }
