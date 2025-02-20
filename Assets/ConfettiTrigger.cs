@@ -5,11 +5,13 @@ public class ConfettiTrigger : MonoBehaviour
 {
     public Button confettiButton;
     public ParticleSystem confettiEffect;
-    public AudioSource confettiSound;  // 🔹 Make sure this is PUBLIC
+    public AudioClip confettiSound;
+
+    private AudioSource src;
 
     void Start()
     {
-        confettiSound = GetComponent<AudioSource>();
+        src = GetComponent<AudioSource>();
 
         if (confettiButton != null)
         {
@@ -42,7 +44,8 @@ public class ConfettiTrigger : MonoBehaviour
 
         if (confettiSound != null)
         {
-            confettiSound.Play();
+            src.clip = confettiSound;
+            src.Play();
             Debug.Log("Sound played!");
         }
         else
