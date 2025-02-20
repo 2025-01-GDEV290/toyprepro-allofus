@@ -21,6 +21,8 @@ public class rock : MonoBehaviour
         {
             audiomanager.instance.onBreakSound();
 
+            golem.golem_instance.AddRock();
+
             Destroy(gameObject);
         }
         else
