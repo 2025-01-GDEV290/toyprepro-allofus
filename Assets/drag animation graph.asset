@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: drag animation graph
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":0.0,"y":0.0},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-747.0,"y":-425.0},"guid":"6036c0fb-487d-45a3-b890-bc4e67c6593b","$version":"A","$type":"Unity.VisualScripting.Start"},{"coroutine":false,"defaultValues":{},"position":{"x":-747.0,"y":-221.0},"guid":"35aadbe4-9d79-43d1-82b1-7bd1ca915b52","$version":"A","$type":"Unity.VisualScripting.Update"},{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-540.0,"y":-46.0},"guid":"0a196732-ac40-430b-a196-ee3b92411c3c","$version":"A","$type":"Unity.VisualScripting.OnMouseUpAsButton","$id":"13"},{"chainable":false,"parameterNames":["name"],"member":{"name":"SetTrigger","parameterTypes":["System.String"],"targetType":"UnityEngine.Animator","targetTypeName":"UnityEngine.Animator","$version":"A"},"defaultValues":{"target":null,"%name":{"$content":"DragAnimation","$type":"System.String"}},"position":{"x":-1.0,"y":-123.0},"guid":"42ce6bd8-9dea-497f-99b1-043d92a74e8a","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"15"},{"specifyFallback":false,"kind":"Scene","defaultValues":{"name":{"$content":"CubeToSendMessageTo","$type":"System.String"}},"position":{"x":-555.0,"y":165.0},"guid":"e8c9c955-92af-4e96-8e44-1c9e252da2a3","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"19"},{"chainable":false,"parameterNames":["name"],"member":{"name":"SetTrigger","parameterTypes":["System.String"],"targetType":"UnityEngine.Animator","targetTypeName":"UnityEngine.Animator","$version":"A"},"defaultValues":{"target":null,"%name":{"$content":"SecondAnimation","$type":"System.String"}},"position":{"x":529.0,"y":-126.0},"guid":"d4366c29-1781-4721-a3c5-88bf0b7ab48a","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"21"},{"specifyFallback":false,"kind":"Scene","defaultValues":{"name":{"$content":"CubeToSendMessageTo","$type":"System.String"}},"position":{"x":127.0,"y":94.0},"guid":"d8d9304a-950e-4ed8-a3f0-51df1a11a679","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"25"},{"sourceUnit":{"$ref":"13"},"sourceKey":"trigger","destinationUnit":{"$ref":"15"},"destinationKey":"enter","guid":"305c8efc-24b3-472f-ae20-b0d70da1607a","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"exit","destinationUnit":{"$ref":"21"},"destinationKey":"enter","guid":"125fa4a9-6f98-40df-929b-c2480ff066c3","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"19"},"sourceKey":"value","destinationUnit":{"$ref":"15"},"destinationKey":"target","guid":"672ca4b1-7c65-4532-868b-3ab33927e052","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"25"},"sourceKey":"value","destinationUnit":{"$ref":"21"},"destinationKey":"target","guid":"a783d2f4-90a9-4b17-81a5-671c12fb7692","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}'
+    _objectReferences: []
