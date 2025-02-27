@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 
     [Header("Player Stats")]
     public int health = 3;
-    public float walk = 6f;
+    public float walk = 8f;
 
     [Header("Player Glider")]
     public GameObject glider;
@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
         {
             air_time += Time.deltaTime;
 
-            if (Input.GetKey(KeyCode.Space) && air_time > 2f)
+            if (Input.GetKey(KeyCode.Space) && air_time >= 2f)
             {
                 glider.SetActive(true);
 

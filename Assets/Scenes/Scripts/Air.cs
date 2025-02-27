@@ -8,19 +8,21 @@ public class Air : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player") && activated)
+        if (other.CompareTag("Player"))
         {
             Player player = other.GetComponent<Player>();
 
-            player.jump_height = 20;
+            if (activated)
+            {
+                player.jump_height = 20;
+            }
+            else
+            {
+                player.jump_height = 1;
+            }
+
         }
 
-        if (other.CompareTag("Player") && !activated)
-        {
-            Player player = other.GetComponent<Player>();
-
-            player.jump_height = 1;
-        }
     }
 
     private void OnTriggerExit(Collider other)
