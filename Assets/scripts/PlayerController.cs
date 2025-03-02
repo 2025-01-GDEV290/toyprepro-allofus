@@ -33,4 +33,5 @@ public class PlayerController : MonoBehaviour
             GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
         }
     }
+   
 }
